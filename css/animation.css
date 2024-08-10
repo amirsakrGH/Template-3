@@ -1,0 +1,73 @@
+/* landing image animation */
+@keyframes moving-uo-down {
+  0%{
+    top: 0;
+  }
+  50%{
+    top:-40px
+  }
+  100%{
+    top: 0;
+  }
+}
+
+
+/* landing scroll down icon bouncing */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform:translateY(0);
+  }
+	40% {
+    transform:translateY(-30px);
+  }
+	60% {
+    transform:translateY(-15px);
+  }
+}
+
+
+/* article arrow animation moving-left-to-right */
+@keyframes moving-left-to-right {
+	100% {
+    transform:translateX(10px);
+  }
+}
+
+
+/* gallery flashing animation start from  center to full image space*/
+@keyframes flash {
+  0%,50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+
+
+
+/* changing background in discount section*/
+
+@keyframes bg-change {
+  0%,100%{
+    background-image: linear-gradient(
+      to right,
+      rgb(23 135 224 / 97%),
+      rgb(23 135 224 / 97%)
+    ),
+    url(./../images/discount/discount-background1.jpg);
+  }
+  50%{
+    background-image: linear-gradient(
+      to right,
+      rgb(23 135 224 / 97%),
+      rgb(23 135 224 / 97%)
+    ),
+    url(./../images/discount/discount-background2.jpg);
+  }
+}
+
+

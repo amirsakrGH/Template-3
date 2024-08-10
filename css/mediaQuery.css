@@ -1,0 +1,151 @@
+/* @media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+} */
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* @media (min-width: 1400px) {
+  .container{
+    width: 1320px;
+  }
+} */
+
+/*  navbar------------- */
+
+@media screen and (max-width: 991px) {
+  nav .dropdown-menu picture {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 14px;
+  }
+  nav .logo {
+    width: 100%;
+  }
+
+  nav .nav-list {
+    margin: auto;
+  }
+
+  nav .logo {
+    --height: 50px;
+  }
+  nav .nav-list > li > a {
+    --height: 40px;
+    padding-inline: 0.625rem;
+  }
+
+  nav .dropdown-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav .dropdown-menu .dropdown_menu--links:first-of-type li:last-child {
+    border-bottom: 1px solid #e9e6e6;
+  }
+}
+
+/* @media screen and (max-width:991px){
+
+} */
+
+/* header (landing)-------- */
+
+@media screen and (max-width: 991px) {
+  header picture.landing-image {
+    display: none;
+  }
+
+  header .landing-text {
+    text-align: center;
+    & p {
+      margin-inline: auto;
+    }
+  }
+}
+
+/* our skills */
+
+@media screen and (max-width: 991px) {
+  .our-skills .image {
+    display: none;
+  }
+}
+
+/* work steps */
+
+@media screen and (max-width: 1200px) {
+  .pricing .most-popular {
+    translate: 0 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .work-steps .container {
+    flex-direction: column;
+  }
+}
+
+/* Events */
+
+@media screen and (max-width: 991px) {
+  .events .content img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .events form {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 7px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .events .event-desc .time-counter .time-unit {
+    width: auto;
+  }
+}
+
+
+
+/* top videos */
+
+@media screen and (max-width: 991px) {
+  .videos .inner-container {
+    flex-direction: column;
+  }
+}
+
+/* top videos */
+
+@media screen and (max-width: 991px) {
+  .discount .content,
+  .discount .contact-us {
+    flex-basis: 100%;
+  }
+}
