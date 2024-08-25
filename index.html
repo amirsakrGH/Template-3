@@ -25,6 +25,9 @@
 
     <!-- ? media screens -->
     <link rel="stylesheet" href="./css/mediaQuery.css" />
+
+    <!-- ? Dark Mode -->
+    <link rel="stylesheet" href="./css/darkMode.css" />
   </head>
   <body>
     <nav id="navbar" class="navbar">
@@ -41,8 +44,8 @@
             <a href="#features">Features</a>
           </li>
           <li>
-            <a href="#">Other Links</a>
-            <div class="dropdown-menu">
+            <a href="#menuList">Other Links</a>
+            <div id="menuList" class="dropdown-menu">
               <picture>
                 <img src="./images/nav/megamenu.png" alt="" />
               </picture>
@@ -108,6 +111,15 @@
             </div>
           </li>
         </ul>
+        <div class="mode">
+          <label for="mode">
+            <i class="fa-regular fa-sun light"></i>
+          </label>
+          <label for="mode">
+            <i class="fa-solid fa-moon dark"></i>
+          </label>
+          <input type="checkbox" hidden aria-hidden id="mode" />
+        </div>
       </div>
     </nav>
 
@@ -1008,5 +1020,11 @@
       </div>
       <p class="copyright">Made With &#10084; By Elzero</p>
     </footer>
+
+    <div class="arrow-up">
+      <a href="#landing" class="to-landing-sec">
+        <i class="fa-solid fa-circle-chevron-up fa-2x"></i>
+      </a>
+    </div>
   </body>
 </html>

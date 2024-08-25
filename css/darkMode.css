@@ -1,0 +1,103 @@
+:root:has(.mode input:checked) {
+  --main-bg-color: hsl(0, 0%, 80%);
+  --main-color: #2196f3;
+  --secondary-color: hsl(207, 81%, 38%);
+  --section-padding-block: 100px;
+  --animation-duration: 300ms;
+  --secondary-bg-color: #1c1c1c;
+  --light: #000;
+  --dark: #fff;
+  --text-gray-color: #ccc;
+  --text-secondary-gary-color: hsl(0, 0%, 67%);
+  --border-color-gray: #222;
+  --border-bt-color: #222;
+  --bg-color-gary-to-light: #121212;
+}
+
+html {
+  background-color: var(--main-bg-color);
+}
+
+header .landing-text h1,
+.footer .info h2  {
+  color: var(--dark);
+}
+
+body:has(.mode input:checked) .gallery::before,
+body:has(.mode input:checked) .services::before {
+  background-image: linear-gradient(
+      225deg,
+      hsl(0, 0%, 80%) 0 25%,
+      transparent 25% 100%
+    ),
+    linear-gradient(135deg, hsl(0, 0%, 80%) 0% 25%, transparent 25% 100%);
+}
+
+.pricing,
+.gallery,
+.features,
+.services,
+.work-steps,
+.our-skills ,
+.testimonials{
+  color: var(--dark);
+}
+
+body:has(.mode input:checked) .pricing .box ,
+body:has(.mode input:checked) .gallery .gallery-box,
+body:has(.mode input:checked) .services .service-box {
+  box-shadow: 0px 10px 15px hsl(0, 0%, 20%);
+}
+
+body:has(.mode input:checked) .features .feature-image::after {
+  border-color: transparent transparent var(--light) transparent;
+}
+
+body:has(.mode input:checked) .teams .box::before {
+  background-color: var(--secondary-bg-color);
+}
+body:has(.mode input:checked) .work-steps .box {
+  background-color: #181818;
+  border-color: var(--dark);
+}
+
+body:has(.mode input:checked) .work-steps .box::before{
+  background-color: hsl(0, 0%, 93%);
+}
+body:has(.mode input:checked) .work-steps .box:hover{
+  color: #000;
+  & p {
+    color: #777;
+  }
+}
+
+body:has(.mode input:checked) .events .container{
+  background-color: hsl(0, 0%, 80%);
+}
+
+
+body:has(.mode input:checked) .events .content .event-desc {
+  --color:var(--border-color-gray);
+}
+
+body:has(.mode input:checked) .pricing .box:hover{
+  color: #222;
+}
+body:has(.mode input:checked) .videos .video-list > div{
+  color: var(--light);
+}
+
+body:has(.mode input:checked) .stats .box i,
+body:has(.mode input:checked) .stats .box  span:first-of-type {
+  color: var(--dark);
+}
+
+
+body:has(.mode input:checked) .mode .light{
+  display: block;
+}
+body:has(.mode input:checked) .mode .dark{
+  display: none;
+}
+
+

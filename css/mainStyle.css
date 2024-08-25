@@ -7,6 +7,17 @@
   --animation-duration: 300ms;
 
   --secondary-bg-color: #ececec;
+
+  --light: #fff;
+  --dark: #000;
+
+  --text-gray-color: #777;
+  --text-secondary-gary-color: #b9b9b9;
+
+  --border-color-gray: #ddd;
+  --border-bt-color:#e9e6e6;
+
+  --bg-color-gary-to-light:#fafafa; 
 }
 
 *,
@@ -27,6 +38,8 @@ html {
 body {
   font-family: "Cairo", sans-serif;
   counter-reset: box;
+  /* background-color: var(--main-bg-color); */
+  
 }
 
 ul {
@@ -55,9 +68,28 @@ img {
 
 /* ? Strart Global Rules */
 
+.mode i {
+  font-size: 1.5625rem;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+.mode .light {
+  display: none;
+}
+
+.arrow-up{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: var(--main-color);
+  z-index: 99999;
+}
+
 .container {
   padding-inline: 15px;
   margin: auto;
+  
 }
 
 .main-title {
@@ -70,14 +102,14 @@ img {
   font-size: 30px;
   text-align: center;
   padding: 8px 16px;
-  border: 2px solid #000;
+  border: 2px solid  var(--dark);
   position: relative;
   z-index: 999;
 }
 
 .main-title h2:hover {
-  color: #fff;
-  border-color: #fff;
+  color:  var(--light);
+  border-color:  var(--light);
   transition: all var(--animation-duration) var(--animation-duration);
 }
 
@@ -144,8 +176,8 @@ img {
 /* ? start Navbar */
 nav {
   --height: 73px;
-  background-color: #fff;
-  box-shadow: 0 0 10px #ddd;
+  background-color:  var(--light);
+  box-shadow: 0 0 10px  var(--border-color-gray);
   /* position: relative; */
 }
 
@@ -185,7 +217,7 @@ nav .nav-list > li > a {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: #000;
+  color:  var(--dark);
   padding: 0 1.875rem;
   transition: all var(--duration);
   overflow: hidden;
@@ -203,7 +235,7 @@ nav .nav-list > li > a::before {
 }
 
 nav .nav-list > li > a:hover {
-  background-color: #fafafa;
+  background-color: var(--bg-color-gary-to-light);
   color: var(--main-color);
 }
 
@@ -218,7 +250,7 @@ nav .dropdown-menu {
   left: 0;
   top: calc(100% + 50px);
   padding: 1.875rem;
-  background-color: #fff;
+  background-color:  var(--light);
   border-bottom: 3px solid var(--main-color);
   display: flex;
   gap: 40px;
@@ -252,7 +284,7 @@ nav .dropdown-menu .dropdown_menu--links li {
 }
 
 nav .dropdown-menu .dropdown_menu--links li:not(:last-child) {
-  border-bottom: 1px solid #e9e6e6;
+  border-bottom: 1px solid var(--border-bt-color);
 }
 
 nav .dropdown-menu .dropdown_menu--links li::before {
@@ -262,7 +294,7 @@ nav .dropdown-menu .dropdown_menu--links li::before {
   left: 0;
   right: 100%;
   bottom: 0;
-  background-color: #fafafa;
+  background-color: var(--bg-color-gary-to-light);
   z-index: -1;
   transition: right var(--animation-duration);
 }
@@ -305,13 +337,14 @@ header .landing-text {
 }
 
 header .landing-text h1 {
+  color: var(--dark);
   font-size: 2.5rem;
   margin: 0;
   letter-spacing: -2px;
 }
 
 header .landing-text p {
-  color: #777;
+  color:  var(--text-gray-color);
   line-height: 1.6;
   margin-top: 7px;
   max-width: 500px;
@@ -359,8 +392,8 @@ header .scroll-down-arrow i {
 }
 
 #articles .article-box {
-  background-color: #fff;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  background-color:  var(--light);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden;
   transition: transform var(--animation-duration),
@@ -378,12 +411,12 @@ header .scroll-down-arrow i {
 
 #articles .article-box .article-content p {
   margin-top: 10px;
-  color: #777;
+  color:  var(--text-gray-color);
 }
 
 #articles .article-box .article-info {
   padding: 20px;
-  border-top: 1px solid #e9e6e6;
+  border-top: 1px solid var(--border-bt-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -423,7 +456,7 @@ header .scroll-down-arrow i {
 .gallery::before{
   content: "";
   position: absolute;
-  background-image: linear-gradient(225deg , white 0 25% , transparent 25% 100%) ,linear-gradient(135deg , white 0% 25% , transparent 25% 100% );
+  background-image: linear-gradient(225deg , hsl(0, 0%, 100%) 0 25% , transparent 25% 100%) ,linear-gradient(135deg , hsl(0, 0%, 100%) 0% 25% , transparent 25% 100% );
   height: 25px;
   left: 0;
   right: 0;
@@ -439,7 +472,7 @@ header .scroll-down-arrow i {
 
 .gallery .gallery-box {
   padding: 15px;
-  background-color: #fff;
+  background-color:  var(--light);
   box-shadow: 0px 10px 15px hsl(0, 0%, 80%);
 }
 
@@ -479,7 +512,7 @@ header .scroll-down-arrow i {
 
 .features {
   padding-block: var(--section-padding-block);
-  background-color: #fff;
+  background-color:  var(--light);
 }
 
 .features .container {
@@ -576,7 +609,7 @@ header .scroll-down-arrow i {
   line-height: 2;
   font-size: 1.25rem;
   padding: 20px;
-  color: #777;
+  color:  var(--text-gray-color);
 }
 
 .features .feature-col a {
@@ -589,7 +622,7 @@ header .scroll-down-arrow i {
   margin-bottom: 30px;
 
   border-color: var(--color);
-  background: linear-gradient(to right, var(--color) 50%, #ffffff 50%);
+  background: linear-gradient(to right, var(--color) 50%,  #fff 50%);
   background-size: 200% 100%;
   background-position: right top;
   transition: all var(--animation-duration);
@@ -614,9 +647,9 @@ header .scroll-down-arrow i {
 }
 
 .testimonials .test-box {
-  background-color: #fff;
+  background-color:  var(--light);
   padding: 20px;
-  box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
@@ -641,7 +674,7 @@ header .scroll-down-arrow i {
 }
 
 .testimonials .test-box p {
-  color: #777;
+  color:  var(--text-gray-color);
   line-height: 1.5;
   margin-top: 10px;
 }
@@ -719,7 +752,7 @@ header .scroll-down-arrow i {
 }
 
 .teams .box .team-info .social i {
-  color: #777;
+  color:  var(--text-gray-color);
 }
 
 .teams .box .team-info .social i:hover {
@@ -737,7 +770,7 @@ header .scroll-down-arrow i {
 }
 
 .teams .box .content p {
-  color: #777;
+  color:  var(--text-gray-color);
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 1.0625rem;
@@ -755,12 +788,13 @@ header .scroll-down-arrow i {
 .services::before{
   content: "";
   position: absolute;
-  background-image: linear-gradient(225deg , white 0 25% , transparent 25% 100%) ,linear-gradient(135deg , white 0% 25% , transparent 25% 100% );
+  background-image: linear-gradient(225deg , white 0 25% , transparent 25% 100%) ,
+                  linear-gradient(135deg , white 0% 25% , transparent 25% 100% );
+  background-size:  25px 25px;
   height: 25px;
   left: 0;
   right: 0;
   top: 0;
-  background-size:  25px 25px;
 }
 
 .services .container {
@@ -770,7 +804,7 @@ header .scroll-down-arrow i {
 }
 
 .services .service-box {
-  background-color: #fff;
+  background-color:  var(--light);
   box-shadow: 0px 10px 15px hsl(0, 0%, 80%);
   position: relative;
   transition: translate var(--animation-duration);
@@ -830,7 +864,7 @@ header .scroll-down-arrow i {
   counter-increment: box;
   content: "0" counter(box);
   position: absolute;
-  color: #fff;
+  color:  var(--light);
   background-color: var(--main-color);
   left: 0;
   top: 0;
@@ -860,7 +894,7 @@ header .scroll-down-arrow i {
 /* .services .service-box .details span{
   font-size: 30px;
   font-weight: bold;
-  color: #fff;
+  color:  var(--light);
   z-index: 99;
 } */
 
@@ -874,7 +908,7 @@ header .scroll-down-arrow i {
 
 .our-skills {
   padding-block: var(--section-padding-block);
-  background-color: #fff;
+  background-color:  var(--light);
 }
 
 .our-skills .container {
@@ -959,7 +993,7 @@ header .scroll-down-arrow i {
   align-items: center;
   gap: 20px;
   padding: 30px;
-  border: 2px solid #fff;
+  border: 2px solid  var(--light);
   border-radius: 7px;
   background-color: #f6f5f5;
   position: relative;
@@ -997,7 +1031,7 @@ header .scroll-down-arrow i {
 .work-steps .box .info p {
   line-height: 1.6;
   font-size: 18px;
-  color: #777;
+  color:  var(--text-gray-color);
 }
 
 /* ! End work-steps */
@@ -1005,7 +1039,7 @@ header .scroll-down-arrow i {
 
 .events {
   padding-block: var(--section-padding-block);
-  /* background-color: #fff; */
+  /* background-color:  var(--light); */
   position: relative;
 }
 
@@ -1034,7 +1068,7 @@ header .scroll-down-arrow i {
   align-items: center;
   flex-direction: column;
   position: relative;
-  background-color: #fff;
+  background-color:  var(--light);
 }
 
 .events .content {
@@ -1049,6 +1083,7 @@ header .scroll-down-arrow i {
 
 .events .content .event-desc {
   text-align: center;
+  --color:#d4d4d4;
 }
 
 .events .event-desc .time-counter {
@@ -1060,7 +1095,7 @@ header .scroll-down-arrow i {
 }
 
 .events .event-desc .time-counter .time-unit {
-  border: 1px solid #d4d4d4;
+  border: 1px solid var(--color);
   border-radius: 7px;
   width: 75px;
   transition: border-color var(--animation-duration);
@@ -1080,7 +1115,7 @@ header .scroll-down-arrow i {
 .events .event-desc .time-counter .time-unit span:last-child {
   padding: 8px 10px;
   font-size: .8125rem;
-  border-top: 1px solid #d4d4d4;
+  border-top: 1px solid var(--color);
   transition: border-color var(--animation-duration);
 }
 
@@ -1097,7 +1132,7 @@ header .scroll-down-arrow i {
 .events .event-desc p {
   line-height: 1.7;
   font-size: 1.125rem;
-  color: #777;
+  color:  var(--text-gray-color);
   margin-block: 20px;
 }
 
@@ -1180,7 +1215,7 @@ header .scroll-down-arrow i {
 }
 
 .pricing .box {
-  background-color: #fff;
+  background-color:  var(--light);
   box-shadow: 0px 10px 15px hsl(0, 0%, 80%);
   /* padding: 30px 15px; */
   position: relative;
@@ -1216,7 +1251,7 @@ header .scroll-down-arrow i {
 .pricing .mark {
   position: absolute;
   background-color: var(--main-color);
-  color: #fff;
+  color:  var(--light);
   padding: 10px 10px 30px;
   writing-mode: vertical-lr;
   font-size: 1.125rem;
@@ -1234,7 +1269,7 @@ header .scroll-down-arrow i {
   position: absolute;
   border-style: solid;
   border-width: 0 20px 20px 20px;
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent  var(--light) transparent;
   width: 100%;
   height: 20px;
   bottom: 0;
@@ -1268,7 +1303,7 @@ header .scroll-down-arrow i {
   margin-bottom: 5px;
 }
 .pricing .box .plan-price span:last-child {
-  color: #777;
+  color:  var(--text-gray-color);
 }
 
 .pricing .box .plan-desc li {
@@ -1298,7 +1333,7 @@ header .scroll-down-arrow i {
 
 .pricing .box a:hover {
   background-color: var(--main-color);
-  color: #fff;
+  color:  var(--light);
 }
 
 /* ! End plan */
@@ -1310,14 +1345,15 @@ header .scroll-down-arrow i {
 }
 
 .videos .inner-container {
+  color: var(--dark);
   display: flex;
   justify-content: center;
   background-color: var(--secondary-bg-color);
-  border: 1px solid #ddd;
+  border: 1px solid  var(--border-color-gray);
 }
 
 .videos .video-list {
-  background-color: #fff;
+  background-color:  var(--light);
   min-width: 300px;
 }
 
@@ -1342,7 +1378,7 @@ header .scroll-down-arrow i {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid  var(--border-color-gray);
   transition: background-color var(--animation-duration);
 }
 
@@ -1351,7 +1387,7 @@ header .scroll-down-arrow i {
 }
 
 .videos .video-list ul li:hover {
-  background-color: #fafafa;
+  background-color: var(--bg-color-gary-to-light);
 }
 
 .videos .video-list ul li:hover a {
@@ -1359,7 +1395,7 @@ header .scroll-down-arrow i {
 }
 
 .videos .video-list ul span {
-  color: #777;
+  color:  var(--text-gray-color);
 }
 
 .videos .preview {
@@ -1370,7 +1406,7 @@ header .scroll-down-arrow i {
 }
 
 .videos .preview p {
-  background-color: #fff;
+  background-color:  var(--light);
   padding: 20px;
 }
 
@@ -1407,7 +1443,7 @@ header .scroll-down-arrow i {
   align-items: center;
   gap: 20px;
   padding: 30px;
-  background-color: #fff;
+  background-color:  var(--light);
   opacity: 0.8;
   position: relative;
 }
@@ -1463,7 +1499,7 @@ header .scroll-down-arrow i {
 
 .discount {
   /* padding-block: var(--section-padding-block); */
-  background-color: #fff;
+  background-color:  var(--light);
 
   display: flex;
   flex-wrap: wrap;
@@ -1485,7 +1521,7 @@ header .scroll-down-arrow i {
     url(./../images/discount/discount-background1.jpg);
   background-size: cover;
   text-align: center;
-  color: #fff;
+  color:  var(--light);
   animation: bg-change 10s linear infinite;
 }
 
@@ -1507,6 +1543,7 @@ header .scroll-down-arrow i {
 }
 
 .discount .contact-us {
+  color: var(--dark);
   flex-basis: 50%;
   display: flex;
   justify-content: center;
@@ -1547,7 +1584,7 @@ header .scroll-down-arrow i {
   border: none;
   cursor: pointer;
   background-color: var(--main-color);
-  color: #fff;
+  color:  var(--light);
   transition: var(--animation-duration);
   margin-bottom: 40px;
 }
@@ -1562,7 +1599,7 @@ header .scroll-down-arrow i {
 .footer {
   background-color: #191919;
   padding-top: 70px;
-  color: #b9b9b9;
+  color:  var(--text-secondary-gary-color);
 }
 
 .footer .container {
@@ -1575,7 +1612,7 @@ header .scroll-down-arrow i {
 
 .footer .info h2 {
   font-size: 3.125rem;
-  color: #fff;
+  color:  var(--light);
 }
 
 .footer .info ul {
@@ -1596,27 +1633,27 @@ header .scroll-down-arrow i {
   justify-content: center;
   align-items: center;
   background-color: #313131;
-  color: #b9b9b9;
+  color:  var(--text-secondary-gary-color);
   transition: all var(--animation-duration);
 }
 
 .footer .info ul li:nth-child(1) a:hover {
   background-color: #1877f2;
-  color: #fff;
+  color:  var(--light);
 }
 
 .footer .info ul li:nth-child(2) a:hover {
-  background-color: #000;
-  color: #fff;
+  background-color:  var(--dark);
+  color:  var(--light);
 }
 
 .footer .info ul li:nth-child(3) a:hover {
   background-color: #ff0000;
-  color: #fff;
+  color:  var(--light);
 }
 
 .footer .info p {
-  color: #b9b9b9;
+  color:  var(--text-secondary-gary-color);
   line-height: 2;
 }
 
@@ -1627,12 +1664,12 @@ header .scroll-down-arrow i {
 
 .footer .important-links li a {
   transition: translate var(--animation-duration);
-  color: #b9b9b9;
+  color:  var(--text-secondary-gary-color);
 }
 
 .footer .important-links li:hover a {
   translate: 10px;
-  color: #fff;
+  color:  var(--light);
 }
 
 .footer .important-links a::before {
@@ -1661,14 +1698,14 @@ header .scroll-down-arrow i {
 
 .footer .footer-gallery img {
   width: 77px;
-  border: 3px solid #ffffff;
+  border: 3px solid  var(--light)fff;
   display: inline-block;
   margin: 2px;
 }
 
 
 .footer .copyright {
-  color: #fff;
+  color:  var(--light);
   margin: 70px 0 0 0;
   border-top: 1px solid #444;
   text-align: center;
